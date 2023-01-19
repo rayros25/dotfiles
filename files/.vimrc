@@ -1,10 +1,34 @@
 " My vim dotfile
-" last updated: 2022-11-24
+" last updated: 2023-01-18
+
 
 " #### PLUGIN STUFF #### "
 " this is needed for nerd-commenter (i think) and also vim-lexical
 set nocompatible
 filetype plugin on
+
+" vim-plug here
+call plug#begin()
+" Colors
+" TODO: other colors
+Plug 'NLKNguyen/papercolor-theme'
+
+" generic stuff
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'chun-yang/auto-pairs'
+
+Plug 'tpope/vim-markdown'
+Plug 'jceb/vim-orgmode'
+Plug 'lervag/vimtex'
+
+" writing stuff
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-colors-pencil'
+Plug 'reedes/vim-pencil'
+Plug 'reedes/vim-lexical'
+call plug#end()
 
 augroup lexical
   autocmd!
@@ -15,9 +39,9 @@ augroup END
 " this is for vim-pencil to work with airline
 let g:airline_section_x = '%{PencilMode()}'
 
-" weird font stuff? i got from the following:
+
+" weird font stuff for airline? i got from the following:
 " https://vi.stackexchange.com/questions/3359/how-do-i-fix-the-status-bar-symbols-in-the-airline-plugin
-" air-line
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
