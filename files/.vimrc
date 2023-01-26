@@ -1,5 +1,5 @@
 " My vim dotfile
-" last updated: 2023-01-18
+" last updated: 2023-01-25
 
 
 " #### PLUGIN STUFF #### "
@@ -18,6 +18,7 @@ Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'chun-yang/auto-pairs'
+Plug 'tpope/vim-surround'
 
 Plug 'tpope/vim-markdown'
 Plug 'jceb/vim-orgmode'
@@ -28,6 +29,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'reedes/vim-pencil'
 Plug 'reedes/vim-lexical'
+
+" uhhhhhh
+Plug 'chaimleib/vim-renpy'
 call plug#end()
 
 augroup lexical
@@ -99,7 +103,8 @@ set relativenumber              " makes numbers relative to current line
 set bg=dark                     " tell vim the bg is dark, better color schemes?
 
 syntax on                       " turn on syntax highlighting 
-set termguicolors               " enable true colors support
+" set termguicolors               " enable true colors support 
+" ^^^ this command sucks, it ruined the colors in tmux
 
 " autocmd vimenter * ++nested colorscheme gruvbox
 colorscheme PaperColor
@@ -111,11 +116,6 @@ colorscheme PaperColor
 " set title                       " idk
 " set ruler                       " show the cursor position 
 "                                 " (not needed with airline)
-
-" to add custom colors:
-" make a ~/.vim/colors directory
-" and put it in there
-
 
 " map KEY KEYSTROKES
 " let mapleader="KEY GOES HERE"
