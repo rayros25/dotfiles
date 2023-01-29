@@ -1,5 +1,5 @@
 " My vim dotfile
-" last updated: 2023-01-26
+" last updated: 2023-01-29
 
 
 " #### PLUGIN STUFF #### "
@@ -25,6 +25,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-markdown'
 Plug 'jceb/vim-orgmode'
 Plug 'lervag/vimtex'
+
+Plug 'christoomey/vim-tmux-navigator'
 
 " writing stuff
 Plug 'junegunn/goyo.vim'
