@@ -1,5 +1,5 @@
 " My vim dotfile
-" last updated: 2023-01-25
+" last updated: 2023-01-26
 
 
 " #### PLUGIN STUFF #### "
@@ -20,6 +20,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'chun-yang/auto-pairs'
 Plug 'tpope/vim-surround'
 
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'tpope/vim-markdown'
 Plug 'jceb/vim-orgmode'
 Plug 'lervag/vimtex'
@@ -34,15 +36,21 @@ Plug 'reedes/vim-lexical'
 Plug 'chaimleib/vim-renpy'
 call plug#end()
 
-augroup lexical
+let g:pencil#wrapModeDefault = 'soft'
+augroup pencil
   autocmd!
-  autocmd FileType markdown,mkd,md call lexical#init()
-  autocmd FileType text,txt call lexical#init({ 'spell': 0 })
+  autocmd FileType markdown,mkd,md  call pencil#init({'wrap': 'soft'})
+                                \ | call lexical#init()
+  autocmd FileType text,txt         call pencil#init({'wrap': 'soft'})
+                                \ | call lexical#init({ 'spell': 0 })
+  autocmd FileType rpy              call pencil#init({'wrap': 'soft'})
+                                \ | call lexical#init()
 augroup END
+
+autocmd FileType rpy setlocal commentstring=#
 
 " this is for vim-pencil to work with airline
 let g:airline_section_x = '%{PencilMode()}'
-
 
 " weird font stuff for airline? i got from the following:
 " https://vi.stackexchange.com/questions/3359/how-do-i-fix-the-status-bar-symbols-in-the-airline-plugin
@@ -75,6 +83,9 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 " let g:airline_symbols.linenr = 'ඞ'
+
+" cool themes, badwolf, behelit
+
 " #### PLUGIN STUFF #### "
 
 
@@ -110,6 +121,7 @@ syntax on                       " turn on syntax highlighting
 colorscheme PaperColor
 " other colors: yowish, darkest-space, rizzle, gruvbox, papercolor, lamu,
 " snazzy, everforest
+let g:airline_theme='badwolf'     " Airline colors, baby
 
 " set clipboard=unnamed           " yanked text gets put in system clipboard
 " set mouse=a                     " enable mouse support
