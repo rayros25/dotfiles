@@ -1,5 +1,5 @@
 " My vim dotfile
-" last updated: 2023-01-29
+" last updated: 2023-02-03
 
 
 " #### PLUGIN STUFF #### "
@@ -24,7 +24,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-markdown'
 Plug 'jceb/vim-orgmode'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -49,7 +49,8 @@ augroup pencil
                                 \ | call lexical#init()
 augroup END
 
-autocmd FileType rpy setlocal commentstring=#
+" autocmd FileType rpy setlocal commentstring=#\ %s
+autocmd FileType rpy setlocal commentstring=balls
 
 " this is for vim-pencil to work with airline
 let g:airline_section_x = '%{PencilMode()}'
@@ -140,7 +141,7 @@ nnoremap <silent> <leader>c :execute "set colorcolumn="
 " taken from this guy:
 "   https://vi.stackexchange.com/questions/17573/function-to-toggle-set-colorcolumn
 " look into recursive stuff? idk
-nnoremap <silent> <leader>\ :.Commentary<CR>
+" nnoremap <silent> <leader>\ :.Commentary<CR>
 " ^^ this one is kinda cringe and i dont do it
 nnoremap <silent> <leader>t :terminal<CR><C-W>L
 
