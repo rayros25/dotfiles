@@ -38,7 +38,13 @@ Plug 'reedes/vim-lexical'
 
 " uhhhhhh
 Plug 'chaimleib/vim-renpy'
+
+" cool icon stuff i guess?
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+set encoding=UTF-8
+
 
 let g:pencil#wrapModeDefault = 'soft'
 augroup pencil
@@ -56,6 +62,9 @@ autocmd FileType rpy setlocal commentstring=balls
 
 " this is for vim-pencil to work with airline
 let g:airline_section_x = '%{PencilMode()}'
+
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_conceal_nerdtree_brackets = 1
 
 " weird font stuff for airline? i got from the following:
 " https://vi.stackexchange.com/questions/3359/how-do-i-fix-the-status-bar-symbols-in-the-airline-plugin
