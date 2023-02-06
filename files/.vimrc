@@ -12,6 +12,8 @@ call plug#begin()
 " Colors
 " TODO: other colors
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'jaredgorski/SpaceCamp'
+Plug 'pineapplegiant/spaceduck'
 
 " generic stuff
 Plug 'tpope/vim-commentary'
@@ -124,7 +126,8 @@ syntax on                       " turn on syntax highlighting
 colorscheme PaperColor
 " other colors: yowish, darkest-space, rizzle, gruvbox, papercolor, lamu,
 " snazzy, everforest
-let g:airline_theme='badwolf'     " Airline colors, baby
+let g:airline_theme='murmur'     " Airline colors, baby
+" badwolf and soda are also pretty cool
 
 " set clipboard=unnamed           " yanked text gets put in system clipboard
 " set mouse=a                     " enable mouse support
