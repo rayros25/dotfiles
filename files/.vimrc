@@ -1,5 +1,5 @@
 " My vim dotfile
-" last updated: 2023-02-03
+" last updated: 2023-02-12
 
 
 " #### PLUGIN STUFF #### "
@@ -38,6 +38,9 @@ Plug 'reedes/vim-lexical'
 
 " uhhhhhh
 Plug 'chaimleib/vim-renpy'
+
+Plug 'jayli/vim-easycomplete'
+Plug 'SirVer/ultisnips'
 
 " cool icon stuff i guess?
 Plug 'ryanoasis/vim-devicons'
@@ -137,6 +140,10 @@ colorscheme PaperColor
 " snazzy, everforest
 let g:airline_theme='murmur'     " Airline colors, baby
 " badwolf and soda are also pretty cool
+
+let &t_ut=''
+" for kitty colors
+" taken from here: https://github.com/kovidgoyal/kitty/issues/108#issuecomment-320492663
 
 " set clipboard=unnamed           " yanked text gets put in system clipboard
 " set mouse=a                     " enable mouse support

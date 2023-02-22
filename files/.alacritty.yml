@@ -108,9 +108,12 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: BigBlue_TerminalPlus Nerd Font
-    family: GohuFont NF
+    # family: Hurmit Nerd Font Mono
+    # family: TerminessTTF Nerd Font Mono
+    # family: 3270 Nerd Font Mono
+    family: GohuFont Nerd Font Mono
     # cool fonts: BigBlue_TerminalPlus Nerd Font
-    #             GohuFont NF
+                # GohuFont NF
     #             HeavyData Nerd Font
     #             DaddyTimeMono Nerd Font     
 
