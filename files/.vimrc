@@ -39,8 +39,8 @@ Plug 'reedes/vim-lexical'
 " uhhhhhh
 Plug 'chaimleib/vim-renpy'
 
-Plug 'jayli/vim-easycomplete'
-Plug 'SirVer/ultisnips'
+" Plug 'jayli/vim-easycomplete'
+" Plug 'SirVer/ultisnips'
 
 " cool icon stuff i guess?
 Plug 'ryanoasis/vim-devicons'
